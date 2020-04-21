@@ -178,3 +178,45 @@ bot.start()
 // TODO 原本微信机器人的接龙主持功能可以转移过来
 // TODO 计划添加可供调用的API接口,通过接口可触发群管操作
 
+var express = require("express");
+var app = express();
+var hostName = '0.0.0.0';
+var port = 8088;
+
+app.all('*', function (_req: any, res:any, next:any) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+  res.header("X-Powered-By", ' 3.2.1')
+  res.header("Content-Type", "application/json;charset=utf-8");
+  next();
+});
+
+// get请求
+app.get("/get", function (req:any, res:any) {
+  console.log("请求url：", req.path)
+  console.log("请求参数：", req.query)
+  res.send("这是get请求");
+})
+
+// post请求
+app.post("/post", function (req:any, res:any) {
+  console.log("请求参数：", req.body);
+  var result = { code: 200, msg: "post请求成功" };
+  res.send(result);
+});
+
+
+// 根据请求处理 向指定群发送群公告
+// 根据请求处理 向指定群发送消息
+
+// 根据请求处理 查找指定用户并尝试邀请加入群
+// 根据请求处理 查找指定用户并尝试踢出指定群
+
+
+
+app.listen(port, hostName, function () {
+
+  console.log(`服务器运行在http://${hostName}:${port}`);
+
+});
