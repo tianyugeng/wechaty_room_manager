@@ -1,4 +1,4 @@
-# Wechaty Getting Started [![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-brightgreen.svg)](https://github.com/chatie/wechaty)
+# 微信群管辅助 [![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-brightgreen.svg)](https://github.com/chatie/wechaty)
 
 
 [![Node.js CI](https://github.com/wechaty/wechaty-getting-started/workflows/Node.js%20CI/badge.svg)](https://github.com/wechaty/wechaty-getting-started/actions?query=workflow%3A%22Node.js+CI%22)
@@ -7,22 +7,20 @@
 
 [Wechaty](https://github.com/Chatie/wechaty/) is a Wechat Bot SDK for Personal Account that lets you create software to extend the functionality of the Wechat, writen in Node.js with TypeScript, Support all platforms including Linux, OSX, Win32, and Docker.
 
-As a developer, you can use Wechaty to easily build your bot on top of Wechat Personal Account, effectively manage message sending/receiving, room creating/inviting, contact friendship, and delightful add artificial intellengence between users and your bot.
+## 功能目的
 
-[![Edit wechaty-getting-started](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/wechaty/wechaty-getting-started/tree/master/?autoresize=1&fontsize=14&hidenavigation=1&module=%2Fexamples%2Fding-dong-bot.ts&theme=dark)
+大型微信群（员工群）通常需要多位管理员分工管理，有各种信息需要发布。但是目前微信群中不论规模均最多只能设置三位群管理员，这在有三名以上管理人员的场景中显得十分不便。本项目的目的是通过机器人代办解决超过三名管理员的情况，方便大型微信群的管理。
 
-> Click the `[Edit in CodeSandbox]` button above for getting started in your browser right now!
 
-This repository should work out-of-the-box, and is the best start point for Wechaty beginners.
 
-## REQUIREMENTS
+## 系统需求
 
-1. Node.js v10 or above
-2. Build Tools for your Platform
+1. Node.js v10 或以上
+2. 基本开发编译环境
 
-## GETTING STARTED
+## 开始使用
 
-### 0. Install Node.js (>=10)
+### 0. 安装 Node.js (>=10)
 
 If you have not installed Node.js(or version is below 10),You need to install the latest version of Node.js first by following the links below:
 
