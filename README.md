@@ -26,11 +26,22 @@
 
 If you have not installed Node.js(or version is below 10),You need to install the latest version of Node.js first by following the links below:
 
-* [Windows](https://nodejs.org/en/download/package-manager/#windows)
-* [Linux(Debian/Ubuntu)](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
-* [macOS](https://nodejs.org/en/download/package-manager/#macos)
-
-> Instal Node.js for other platforms can be found at <https://nodejs.org/en/download/package-manager/>
+- Linux 
+```
+wget https://npm.taobao.org/mirrors/node/v12.2.0/node-v12.2.0-linux-x64.tar.xz
+tar -xvf node-v12.2.0-linux-x64.tar.xz 
+mv node-v12.2.0-linux-x64 /opt/node
+tee /etc/profile << EOF
+  export NODE_HOME=/opt/node
+  export PATH=$NODE_HOME/bin:$PATH
+EOF
+source /etc/profile
+```
+随后可验证安装是否成功
+```
+node -v
+```
+> 在其他平台安装 Node.js 的方法可参见 <https://nodejs.org/en/download/package-manager/>
 
 ### 1. Clone this Repository
 
