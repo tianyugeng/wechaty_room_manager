@@ -9,9 +9,11 @@
 
 ## 功能目的
 
-大型微信群（员工群）通常需要多位管理员分工管理，有各种信息需要发布。但是目前微信群中不论规模均最多只能设置三位群管理员，这在有三名以上管理人员的场景中显得十分不便。本项目的目的是通过机器人代办解决超过三名管理员的情况，方便大型微信群的管理。
+- 大型微信群（员工群）通常需要多位管理员分工管理，有各种信息需要发布。但是目前微信群中不论规模均最多只能设置三位群管理员，这在有三名以上管理人员的场景中显得十分不便。本项目的目的是通过机器人代办解决超过三名管理员的情况，方便大型微信群的管理。
 
+- 此外对于人员较多且拥有自己的OA系统的公司而言，HR在微信群的维护上也是苦不堪言。人员流动带来的成员变动、人数超过500人限制导致的分群消息同步等问题都为HR带来了巨量的麻烦。本项目的第二步计划通过网络接口的形式提供API供OA系统调用，达到可以自动控制群成员，解放人力的目的。
 
+- 对于分群，本项目第三步计划是通过命令连接两个甚至多个不同的微信群，达到消息自动转发的目的，从某种意义上实现群成员超过500人上限。
 
 ## 系统需求
 
@@ -69,48 +71,3 @@ npm run start:ts
 
 This will run `examples/ding-dong-bot.ts` instead of `examples/ding-dong-bot.js` for you.
 
-### 2. Wechaty Tutorial
-
-<div align="center">
-<a target="_blank" href="https://blog.chatie.io/getting-started-wechaty/"><img src="https://cloud.githubusercontent.com/assets/1361891/21722581/3ec957d0-d468-11e6-8888-a91c236e0ba2.jpg" border=0 width="60%"></a>
-</div>
-
-Above is a 10 minute video tutorial(a little outdated, it's running under v0.14 or older versions of Wechaty), which is a good way to start if you are new to Wechaty.
-
-### 3. More Examples
-
-> Note: Please make sure you can run `npm start` with this repository first before you go furture with more examples!
-
-* [Official Wechaty Examples Directory](https://github.com/wechaty/wechaty-getting-started/tree/master/examples)
-
-## API REFERENCE
-
-1. JSDoc: <https://chatie.io/wechaty/>
-
-## SEE ALSO
-
-### 1. Docker Wechaty Getting Started
-
-[![Docker](https://avatars0.githubusercontent.com/u/5429470?s=200)](https://github.com/Chatie/docker-wechaty-getting-started)
-
-<https://github.com/Chatie/docker-wechaty-getting-started>
-
-### 2. Heroku Wechaty Getting Started
-
-[![Heroku](https://avatars3.githubusercontent.com/u/23211?s=200)](https://github.com/Chatie/heroku-wechaty-getting-started)
-
-<https://github.com/Chatie/heroku-wechaty-getting-started>
-
-## FAQ
-
-### 1. I can not login with my Wechat account
-
-Wechat account that registered after 2017 will not be able to login via Web API.  Learn more at <https://github.com/Chatie/wechaty/issues/872>
-
-Solution: Wechaty support protocols other than Web API, such as pad. Learn more at <https://github.com/Chatie/wechaty/issues/1296>
-
-### 2. What is a `Puppet` in Wechaty
-
-The term [Puppet](https://github.com/Chatie/wechaty/wiki/Puppet) in Wechaty is an Abstract Class for implementing protocol plugins. The plugins are the component that helps Wechaty to control the Wechat(that's the reason we call it puppet).
-
-The plugins are named `PuppetXXX`, like [PuppetPuppeteer](https://github.com/Chatie/wechaty-puppet-puppeteer) is using the [google puppeteer](https://github.com/GoogleChrome/puppeteer) to control the [WeChat Web API](https://wx.qq.com) via a chrome browser, [PuppetPadchat](https://github.com/lijiarui/wechaty-puppet-padchat) is using the WebSocket protocol to connect with a Protocol Server for controlling the iPad Wechat program. More detail you could go [Puppet in wiki](https://github.com/Chatie/wechaty/wiki/Puppet).
