@@ -16,6 +16,7 @@
 - 对于分群，本项目第三步计划是通过命令连接两个甚至多个不同的微信群，达到消息自动转发的目的，从某种意义上实现群成员超过500人上限。
 
 ## 系统需求
+> 我是用的是centos7作为开发运行环境，已经提前安装了git
 
 1. Node.js v10 或以上
 2. 基本开发编译环境
@@ -24,9 +25,9 @@
 
 ### 0. 安装 Node.js (>=10)
 
-If you have not installed Node.js(or version is below 10),You need to install the latest version of Node.js first by following the links below:
+如果你没有安装node或已经安装的node版本低于10，请根据下面步骤安装新的nodejs环境
 
-- Linux 
+- Linux （centos7）
 ```sh
 wget https://npm.taobao.org/mirrors/node/v12.2.0/node-v12.2.0-linux-x64.tar.xz
 tar -xvf node-v12.2.0-linux-x64.tar.xz 
