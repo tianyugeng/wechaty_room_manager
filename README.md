@@ -4,16 +4,18 @@
 [![Node.js CI](https://github.com/wechaty/wechaty-getting-started/workflows/Node.js%20CI/badge.svg)](https://github.com/wechaty/wechaty-getting-started/actions?query=workflow%3A%22Node.js+CI%22)
 ![Node.js v10](https://img.shields.io/badge/node-%3E%3D10-green.svg)
 [![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/chatie/wechaty)
+[![Wechaty开源激励计划](https://img.shields.io/badge/Wechaty-开源激励计划-green.svg)](https://github.com/juzibot/Welcome/wiki/Everything-about-Wechaty)
 
 [Wechaty](https://github.com/Chatie/wechaty/) is a Wechat Bot SDK for Personal Account that lets you create software to extend the functionality of the Wechat, writen in Node.js with TypeScript, Support all platforms including Linux, OSX, Win32, and Docker.
 
 ## 功能目的
 
 - 大型微信群（员工群）通常需要多位管理员分工管理，有各种信息需要发布。但是目前微信群中不论规模均最多只能设置三位群管理员，这在有三名以上管理人员的场景中显得十分不便。本项目的目的是通过机器人代办解决超过三名管理员的情况，方便大型微信群的管理。
-  - [x] 群主可设置机器人管理员
+  - [x] 群主可设置机器人管理员(指令:##ADD{@目标人员};##DEL{@目标人员})
   - [x] 响应机器人管理员指令
-  - [x] 根据机器人管理员的指令发布群公告
-  - [ ] 根据机器人管理员的指令移除群成员
+  - [x] 根据机器人管理员的指令发布群公告(指令:##{目标内容})
+  - [ ] 根据机器人管理员的指令移除群成员(指令:##KIK{@目标人员})
 
 - 此外对于人员较多且拥有自己的OA系统的公司而言，HR在微信群的维护上也是苦不堪言。人员流动带来的成员变动、人数超过500人限制导致的分群消息同步等问题都为HR带来了巨量的麻烦。本项目的第二步计划通过网络接口的形式提供API供OA系统调用，达到可以自动控制群成员，解放人力的目的。
   - [ ] 提供http访问接口供外部程序引用
